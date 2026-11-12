@@ -3,55 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bistro Bliss</title>
+    <title>About | Bistro Bliss</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
 </head>
-<body>
-    <header class="navbar">
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html" class="active">About</a>
-            <a href="menu.html">Menu</a>
-            <a href="#">Pages</a>
-            <a href="#">Contact</a>
-        </nav>
-        
-    </header>
-    <style>
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background-color: #f46905;
-    position: relative;
-    z-index: 10;
-}
+<body class="about-page">
 
-.nav-links {
-    display: flex;
-    gap: 25px;
-    font-family: sans-serif;
-    font-weight: bold;
-}
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-text">
+        <span style="color: black; font-family:'Playfair Display', serif;">Bistro</span>
+        <span style="color: #f46905;">Bliss</span>
+      </span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-.nav-links a {
-    text-decoration: none;
-    color:#000;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-}
-.nav-links a.active , .nav-links a:hover{
-    background-color: #fff;
-    color: #f46905;
-}
+  <section class="about-hero">
+    <h1>Good food, made with care</h1>
+    <p>Bistro Bliss brings together the flavors Bangladesh loves, from slow-cooked biryani to street-side snacks, in one welcoming place.</p>
+  </section>
 
+  <main class="about-main">
 
-    </style>
+    <!-- Our story -->
+    <section class="story">
+      <div class="story-text">
+        <h2>Our story</h2>
+        <p>Bistro Bliss started with a simple idea: a good meal should feel like a small celebration. We cook the dishes people grew up eating, and we cook them properly, with fresh ingredients, patient preparation and honest portions.</p>
+        <p>Our menu is organized into five easy categories, so you can find what you are craving in seconds. Whether it is a family biryani, a quick burger or a cold lassi on a hot day, every plate leaves our kitchen the same way: hot, fresh and ready to enjoy.</p>
+        <a href="menu.html" class="btn btn-solid">View our menu</a>
+      </div>
+      <div class="story-facts">
+        <div class="fact"><span class="fact-num">5</span><span class="fact-label">Menu categories</span></div>
+        <div class="fact"><span class="fact-num">25</span><span class="fact-label">Signature dishes</span></div>
+        <div class="fact"><span class="fact-num">7</span><span class="fact-label">Days a week</span></div>
+      </div>
+    </section>
 
-    
+    <!-- Why choose us -->
+    <section class="why">
+      <h2 class="section-title">Why people choose us</h2>
+      <div class="why-grid">
+        <article class="why-card">
+          <span class="why-icon" aria-hidden="true">🌿</span>
+          <h3>Fresh ingredients</h3>
+          <p>We prepare our dishes daily with fresh meat, vegetables and spices, never pre-packed or reheated from yesterday.</p>
+        </article>
+        <article class="why-card">
+          <span class="why-icon" aria-hidden="true">👨‍🍳</span>
+          <h3>Cooked to order</h3>
+          <p>Our kitchen team cooks your meal when you order it, so it reaches your table or doorstep hot and full of flavor.</p>
+        </article>
+        <article class="why-card">
+          <span class="why-icon" aria-hidden="true">🛵</span>
+          <h3>Easy ordering</h3>
+          <p>A clear, category-wise menu makes ordering simple, and our delivery team gets your food to you quickly and carefully.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Hours + Contact -->
+    <section class="visit">
+      <article class="info-card hours-card">
+        <h2>Opening hours</h2>
+        <table class="hours-table">
+          <tbody>
+            <tr><th scope="row">Saturday to Thursday</th><td>11:00 AM to 11:00 PM</td></tr>
+            <tr><th scope="row">Friday</th><td>12:00 PM to 11:30 PM</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Kitchen closes 30 minutes before closing time. Hours may change on public holidays.</p>
+      </article>
+
+      <article class="info-card contact-card">
+        <h2>Get in touch</h2>
+        <p class="cta-text">Have a question, want to book a table or plan an event? Our team is happy to help.</p>
+        <a href="contact.html" class="btn btn-solid">Contact us</a>
+      </article>
+    </section>
+
+  </main>
+
+  <footer class="about-footer">
+    <p>Bistro Bliss. Fresh food, made with care.</p>
+  </footer>
+
 </body>
 </html>

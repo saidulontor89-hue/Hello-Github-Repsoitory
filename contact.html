@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Bistro Bliss</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body class="contact-page">
+
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-text">
+        <span style="color: black; font-family:'Playfair Display', serif;">Bistro</span>
+        <span style="color: #f46905;">Bliss</span>
+      </span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-hero">
+    <h1>We'd love to hear from you</h1>
+    <p>Questions about our menu, a table for a special occasion, or feedback on your last meal? Our team is happy to help and replies to every message.</p>
+  </section>
+
+  <main class="contact-main">
+
+    <!-- Quick contact cards -->
+    <section class="quick-grid" aria-label="Contact details">
+      <article class="quick-card">
+        <span class="q-icon" aria-hidden="true">📍</span>
+        <h2>Visit us</h2>
+        <p>House 12, Road 5, Dhanmondi, Dhaka</p>
+      </article>
+      <article class="quick-card">
+        <span class="q-icon" aria-hidden="true">📞</span>
+        <h2>Call us</h2>
+        <p><a href="tel:+8801700000000">+880 1700-000000</a></p>
+      </article>
+      <article class="quick-card">
+        <span class="q-icon" aria-hidden="true">✉️</span>
+        <h2>Email us</h2>
+        <p><a href="mailto:hello@bistrobliss.com">hello@bistrobliss.com</a></p>
+      </article>
+      <article class="quick-card">
+        <span class="q-icon" aria-hidden="true">🕒</span>
+        <h2>Opening hours</h2>
+        <p>Sat to Thu: 11:00 AM to 11:00 PM<br>Fri: 12:00 PM to 11:30 PM</p>
+      </article>
+    </section>
+
+    <!-- Form + side info -->
+    <section class="form-wrap">
+      <div class="form-card">
+        <h2>Send us a message</h2>
+        <p class="form-intro">Fill in the form and we will get back to you within one working day.</p>
+
+        <form action="mailto:hello@bistrobliss.com" method="post" enctype="text/plain">
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" placeholder="+880 1XXX-XXXXXX">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="field">
+            <label for="topic">What is this about?</label>
+            <select id="topic" name="topic">
+              <option>General enquiry</option>
+              <option>Table reservation</option>
+              <option>Delivery or order help</option>
+              <option>Catering and events</option>
+              <option>Feedback</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Your message</label>
+            <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+          </div>
+
+          <button type="submit" class="send-btn">Send message</button>
+        </form>
+      </div>
+
+      <aside class="side-card">
+        <h2>Let's connect</h2>
+        <p>Prefer a more direct route? Reach us by phone during opening hours, or connect with us on LinkedIn for updates and professional enquiries.</p>
+
+        <a class="linkedin-btn" href="https://www.linkedin.com/in/md-maidul-islam786" target="_blank" rel="noopener noreferrer">
+          <span class="in-badge" aria-hidden="true">in</span>
+          <span>Connect on LinkedIn</span>
+        </a>
+
+        <div class="side-note">
+          <h3>Delivery</h3>
+          <p>Daily, 11:30 AM to 10:30 PM</p>
+        </div>
+        <div class="side-note">
+          <h3>Large orders and events</h3>
+          <p>Planning a party or office lunch? Choose "Catering and events" in the form and tell us the date and number of guests.</p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h2 class="section-title">Frequently asked questions</h2>
+      <div class="faq-list">
+        <details>
+          <summary>What are your opening hours?</summary>
+          <p>We are open Saturday to Thursday from 11:00 AM to 11:00 PM, and on Friday from 12:00 PM to 11:30 PM. The kitchen closes 30 minutes before closing time.</p>
+        </details>
+        <details>
+          <summary>Do you offer home delivery?</summary>
+          <p>Yes. Delivery is available every day from 11:30 AM to 10:30 PM. Call us or send a message and we will confirm your area and delivery time.</p>
+        </details>
+        <details>
+          <summary>Can I reserve a table for a group?</summary>
+          <p>Of course. Send us a message with your preferred date, time and number of guests, and we will confirm your booking by phone or email.</p>
+        </details>
+        <details>
+          <summary>How can I share feedback or report a problem?</summary>
+          <p>Use the form above and choose "Feedback". We read every message and use it to improve our food and service.</p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="contact-footer">
+    <p>Bistro Bliss. Fresh food, made with care.</p>
+  </footer>
+
+</body>
+</html>
