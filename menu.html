@@ -3,58 +3,421 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bistro Bliss</title>
+    <title>Menu | Bistro Bliss</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
 </head>
-<body>
-    <header class="navbar">
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="menu.html" class="active">Menu</a>
-            <a href="#">Pages</a>
-            <a href="#">Contact</a>
-        </nav>
-        
-    </header>
-    <style>
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background-color: #f46905;
-    position: relative;
-    z-index: 10;
-}
-.nav-links {
-    display: flex;
-    gap: 25px;
-    font-family: sans-serif;
-    font-weight: bold;
-    background-color: #f46905;
-}
+<body class="menu-page">
 
-.nav-links a {
-    text-decoration: none;
-    color:#000;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-}
-.nav-links a.active,.nav-links a:hover{
-    background-color: #fff;
-    color: #f46905;
-}
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-text">
+        <span style="color: black; font-family:'Playfair Display', serif;">Bistro</span>
+        <span style="color: #f46905;">Bliss</span>
+      </span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
+  <section class="menu-hero">
+    <h1>Pick what you're craving</h1>
+    <p>Five categories, five favorites in each. Choose a category below to jump straight to it.</p>
+  </section>
 
+  <nav class="category-bar" aria-label="Menu categories">
+    <div class="category-chips">
+      <a href="#biryani" class="chip"><span aria-hidden="true">🍛</span> Rice & Biryani</a>
+      <a href="#chicken-beef" class="chip"><span aria-hidden="true">🍗</span> Chicken & Beef</a>
+      <a href="#fast-food" class="chip"><span aria-hidden="true">🍔</span> Fast Food</a>
+      <a href="#snacks" class="chip"><span aria-hidden="true">🥟</span> Snacks & Street Food</a>
+      <a href="#drinks-desserts" class="chip"><span aria-hidden="true">🥤</span> Drinks & Desserts</a>
+    </div>
+  </nav>
 
+  <main class="menu-main">
+  <section class="menu-section cat-biryani" id="biryani" style="--emoji: '🍛';">
+    <div class="section-head">
+      <h2>Rice & Biryani</h2>
+      <p>Fragrant rice dishes, slow-cooked with whole spices.</p>
+    </div>
+    <div class="food-grid">
+      <article class="food-card is-featured">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Kacchi Biryani" style="background-image: url('images/biryani/kacchi-biryani.jpg');"></div>
+        </div>
+        <div class="food-body">
+        <span class="tag">Most ordered</span>
+          <h3>Kacchi Biryani</h3>
+          <p>Tender mutton and aromatic rice, cooked together in a sealed pot.</p>
+          <div class="food-foot">
+            <span class="price">৳320</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Chicken Biryani" style="background-image: url('images/biryani/chicken-biryani.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Chicken Biryani</h3>
+          <p>Soft chicken layered with long-grain rice and fried onions.</p>
+          <div class="food-foot">
+            <span class="price">৳220</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Mutton Biryani" style="background-image: url('images/biryani/mutton-biryani.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Mutton Biryani</h3>
+          <p>Rich, juicy mutton pieces in spiced, saffron-scented rice.</p>
+          <div class="food-foot">
+            <span class="price">৳300</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Tehari" style="background-image: url('images/biryani/tehari.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Tehari</h3>
+          <p>Spiced rice cooked with tender meat and green chilies, a Dhaka favorite.</p>
+          <div class="food-foot">
+            <span class="price">৳240</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Morog Polao" style="background-image: url('images/biryani/morog-polao.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Morog Polao</h3>
+          <p>Fragrant polao with chicken, boiled egg and cashews.</p>
+          <div class="food-foot">
+            <span class="price">৳260</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="menu-section cat-chicken-beef" id="chicken-beef" style="--emoji: '🍗';">
+    <div class="section-head">
+      <h2>Chicken & Beef</h2>
+      <p>Hearty meat dishes, best with plain rice or naan.</p>
+    </div>
+    <div class="food-grid">
+      <article class="food-card is-featured">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Chicken Roast" style="background-image: url('images/chicken-beef/chicken-roast.jpg');"></div>
+        </div>
+        <div class="food-body">
+        <span class="tag">Most ordered</span>
+          <h3>Chicken Roast</h3>
+          <p>Glossy, mildly sweet Bangladeshi-style roast chicken.</p>
+          <div class="food-foot">
+            <span class="price">৳180</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Chicken Tikka" style="background-image: url('images/chicken-beef/chicken-tikka.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Chicken Tikka</h3>
+          <p>Yogurt-marinated chicken, grilled until lightly charred.</p>
+          <div class="food-foot">
+            <span class="price">৳260</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Beef Kala Bhuna" style="background-image: url('images/chicken-beef/beef-kala-bhuna.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Beef Kala Bhuna</h3>
+          <p>Slow-cooked until dark, thick and deeply spiced.</p>
+          <div class="food-foot">
+            <span class="price">৳350</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Beef Bhuna" style="background-image: url('images/chicken-beef/beef-bhuna.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Beef Bhuna</h3>
+          <p>Classic beef curry with a thick, savory masala.</p>
+          <div class="food-foot">
+            <span class="price">৳300</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Beef Rezala" style="background-image: url('images/chicken-beef/beef-rezala.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Beef Rezala</h3>
+          <p>Creamy yogurt-based curry with a mild, rich flavor.</p>
+          <div class="food-foot">
+            <span class="price">৳330</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="menu-section cat-fast-food" id="fast-food" style="--emoji: '🍔';">
+    <div class="section-head">
+      <h2>Fast Food</h2>
+      <p>Quick bites for when you want something now.</p>
+    </div>
+    <div class="food-grid">
+      <article class="food-card is-featured">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Beef Burger" style="background-image: url('images/fast-food/beef-burger.jpg');"></div>
+        </div>
+        <div class="food-body">
+        <span class="tag">Most ordered</span>
+          <h3>Beef Burger</h3>
+          <p>Juicy grilled beef patty with fresh lettuce in a sesame bun.</p>
+          <div class="food-foot">
+            <span class="price">৳280</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Chicken Burger" style="background-image: url('images/fast-food/chicken-burger.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Chicken Burger</h3>
+          <p>Crispy chicken fillet with creamy sauce and crunchy lettuce.</p>
+          <div class="food-foot">
+            <span class="price">৳240</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Pizza" style="background-image: url('images/fast-food/pizza.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Pizza</h3>
+          <p>Loaded with cheese and baked until golden.</p>
+          <div class="food-foot">
+            <span class="price">৳450</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Chicken Shawarma" style="background-image: url('images/fast-food/chicken-shawarma.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Chicken Shawarma</h3>
+          <p>Spiced grilled chicken, creamy garlic sauce and crunchy veggies in a warm wrap.</p>
+          <div class="food-foot">
+            <span class="price">৳160</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Pasta" style="background-image: url('images/fast-food/pasta.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Pasta</h3>
+          <p>Spiral pasta tossed with mushrooms, broccoli and fresh herbs.</p>
+          <div class="food-foot">
+            <span class="price">৳290</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="menu-section cat-snacks" id="snacks" style="--emoji: '🥟';">
+    <div class="section-head">
+      <h2>Snacks & Street Food</h2>
+      <p>Small plates and street-side favorites.</p>
+    </div>
+    <div class="food-grid">
+      <article class="food-card is-featured">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Fuchka" style="background-image: url('images/snacks/fuchka.jpg');"></div>
+        </div>
+        <div class="food-body">
+        <span class="tag">Most ordered</span>
+          <h3>Fuchka</h3>
+          <p>Crisp shells filled with spiced potato, yogurt and crunchy sev.</p>
+          <div class="food-foot">
+            <span class="price">৳80</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Chotpoti" style="background-image: url('images/snacks/chotpoti.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Chotpoti</h3>
+          <p>Spiced chickpeas topped with egg, onion and tamarind sauce.</p>
+          <div class="food-foot">
+            <span class="price">৳90</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Chicken Roll" style="background-image: url('images/snacks/chicken-roll.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Chicken Roll</h3>
+          <p>Crispy, golden chicken roll with a soft herby filling.</p>
+          <div class="food-foot">
+            <span class="price">৳120</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Singara" style="background-image: url('images/snacks/singara.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Singara</h3>
+          <p>Two crisp pastries with a spiced potato filling.</p>
+          <div class="food-foot">
+            <span class="price">৳40</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Chicken Wings" style="background-image: url('images/snacks/chicken-wings.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Chicken Wings</h3>
+          <p>Crispy wings tossed in a spicy, sticky glaze.</p>
+          <div class="food-foot">
+            <span class="price">৳250</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="menu-section cat-drinks-desserts" id="drinks-desserts" style="--emoji: '🥤';">
+    <div class="section-head">
+      <h2>Drinks & Desserts</h2>
+      <p>Something cool or sweet to finish the meal.</p>
+    </div>
+    <div class="food-grid">
+      <article class="food-card is-featured">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Borhani" style="background-image: url('images/drinks-desserts/borhani.jpg');"></div>
+        </div>
+        <div class="food-body">
+        <span class="tag">Most ordered</span>
+          <h3>Borhani</h3>
+          <p>Salty-spicy yogurt drink with fresh mint, a perfect match for biryani.</p>
+          <div class="food-foot">
+            <span class="price">৳60</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Lassi" style="background-image: url('images/drinks-desserts/lassi.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Lassi</h3>
+          <p>Cool, creamy yogurt drink served chilled.</p>
+          <div class="food-foot">
+            <span class="price">৳90</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Fresh Mango Juice" style="background-image: url('images/drinks-desserts/mango-juice.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Fresh Mango Juice</h3>
+          <p>Fresh, chilled mango juice served over ice.</p>
+          <div class="food-foot">
+            <span class="price">৳110</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Firni" style="background-image: url('images/drinks-desserts/firni.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Firni</h3>
+          <p>Creamy rice pudding set in a traditional clay bowl.</p>
+          <div class="food-foot">
+            <span class="price">৳100</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-media">
+          <div class="food-photo" role="img" aria-label="Ice Cream" style="background-image: url('images/drinks-desserts/ice-cream.jpg');"></div>
+        </div>
+        <div class="food-body">
+          <h3>Ice Cream</h3>
+          <p>Creamy ice cream topped with colorful sprinkles.</p>
+          <div class="food-foot">
+            <span class="price">৳80</span>
+            <button type="button" class="add-btn">Add to cart</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  </main>
 
+  <footer class="menu-footer">
+    <p>Prices are in Bangladeshi Taka (৳). Bistro Bliss</p>
+  </footer>
 
-    </style>
-
-    
 </body>
 </html>

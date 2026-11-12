@@ -1,0 +1,295 @@
+/* ===== About page styles (works together with style.css) ===== */
+
+:root {
+    --orange: #f46905;
+    --orange-deep: #d65800;
+    --orange-dark: #b84a00;
+    --tint: #fff3ea;
+    --ink: #2a211c;
+    --muted: #6b5f57;
+    --line: #f0e2d8;
+}
+
+body.about-page {
+    font-family: 'Work Sans', sans-serif;
+    color: var(--ink);
+    background: #fff;
+}
+
+/* Navbar tweaks for small screens */
+.about-page .navbar {
+    border-bottom: 1px solid var(--line);
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+@media (max-width: 760px) {
+    .about-page .navbar { justify-content: center; }
+    .about-page .nav-links { flex-wrap: wrap; justify-content: center; gap: 6px; }
+    .about-page .nav-links a { font-size: 16px; padding: 6px 12px; }
+}
+
+/* ===== Hero ===== */
+.about-hero {
+    background: var(--tint);
+    padding: 64px 8% 56px;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 5vw, 56px);
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 14px;
+}
+
+.about-hero p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--muted);
+}
+
+/* ===== Layout ===== */
+.about-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 5% 56px;
+}
+
+.about-main h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* ===== Story ===== */
+.story {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 48px;
+    align-items: center;
+    padding: 48px 0;
+}
+
+.story-text h2 {
+    font-size: clamp(28px, 3.4vw, 38px);
+    margin-bottom: 16px;
+}
+
+.story-text p {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--muted);
+    margin-bottom: 16px;
+}
+
+.story-text .btn {
+    margin-top: 8px;
+    background-color: var(--orange-deep);
+}
+
+.story-text .btn:hover {
+    background-color: var(--orange-dark);
+    color: #fff;
+}
+
+.story-facts {
+    display: grid;
+    gap: 16px;
+}
+
+.fact {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 20px 24px;
+    background: var(--tint);
+    border-left: 5px solid var(--orange);
+    border-radius: 12px;
+}
+
+.fact-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    font-weight: 600;
+    color: var(--orange-deep);
+    min-width: 64px;
+}
+
+.fact-label {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+/* ===== Why us ===== */
+.why {
+    padding: 24px 0 48px;
+}
+
+.section-title {
+    font-size: clamp(28px, 3.4vw, 38px);
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.why-card {
+    padding: 28px 24px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(244, 105, 5, 0.14);
+}
+
+.why-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    font-size: 26px;
+    background: var(--tint);
+    border-radius: 14px;
+    margin-bottom: 16px;
+}
+
+.why-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.why-card p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--muted);
+}
+
+/* ===== Hours + contact ===== */
+.visit {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    scroll-margin-top: 20px;
+}
+
+.info-card {
+    padding: 32px 30px;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    background: var(--tint);
+}
+
+.info-card h2 {
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.hours-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.hours-table th,
+.hours-table td {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    font-size: 16px;
+}
+
+.hours-table th { font-weight: 600; }
+.hours-table td { text-align: right; color: var(--orange-dark); font-weight: 600; }
+
+.note {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+.contact-list {
+    list-style: none;
+}
+
+.contact-list li {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 16px;
+}
+
+.contact-list li:last-child { border-bottom: none; }
+
+.c-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--orange-dark);
+}
+
+.contact-list a {
+    color: var(--orange-dark);
+    font-weight: 500;
+    word-break: break-all;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+.contact-list a:focus-visible {
+    outline: 3px solid var(--ink);
+    outline-offset: 2px;
+}
+
+.cta-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin-bottom: 22px;
+}
+
+.contact-card .btn {
+    background-color: var(--orange-deep);
+}
+
+.contact-card .btn:hover {
+    background-color: var(--orange-dark);
+    color: #fff;
+}
+
+/* ===== Footer ===== */
+.about-footer {
+    text-align: center;
+    padding: 28px 8%;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 860px) {
+    .story { grid-template-columns: 1fr; gap: 28px; }
+    .why-grid { grid-template-columns: 1fr; }
+    .visit { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .why-card, .why-card:hover { transition: none; transform: none; }
+}
