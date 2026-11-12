@@ -1,0 +1,347 @@
+/* ===== Menu page styles (works together with style.css) ===== */
+
+:root {
+    --orange: #f46905;
+    --orange-deep: #d65800;
+    --orange-dark: #b84a00;
+    --tint: #fff3ea;
+    --ink: #2a211c;
+    --muted: #6b5f57;
+    --line: #f0e2d8;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+body.menu-page {
+    font-family: 'Work Sans', sans-serif;
+    color: var(--ink);
+    background: #fff;
+}
+
+/* Navbar tweaks so it works on small screens */
+.menu-page .navbar {
+    border-bottom: 1px solid var(--line);
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+@media (max-width: 760px) {
+    .menu-page .navbar {
+        justify-content: center;
+    }
+    .menu-page .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+    .menu-page .nav-links a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+}
+
+/* ===== Hero ===== */
+.menu-hero {
+    background: var(--tint);
+    padding: 56px 8% 48px;
+    text-align: center;
+}
+
+.menu-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 5vw, 56px);
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 14px;
+}
+
+.menu-hero p {
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+/* ===== Sticky category bar ===== */
+.category-bar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+}
+
+.category-chips {
+    display: flex;
+    gap: 10px;
+    padding: 14px 8%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    justify-content: center;
+}
+
+.category-chips::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .category-chips {
+        justify-content: flex-start;
+    }
+}
+
+.chip {
+    flex: 0 0 auto;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 15px;
+    font-weight: 500;
+    padding: 9px 18px;
+    border: 1.5px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.chip:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: #fff;
+}
+
+.chip:focus-visible,
+.add-btn:focus-visible {
+    outline: 3px solid var(--ink);
+    outline-offset: 2px;
+}
+
+/* ===== Menu sections ===== */
+.menu-main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 24px 5% 40px;
+}
+
+.menu-section {
+    padding-top: 40px;
+    scroll-margin-top: 70px; /* keeps the heading visible below the sticky bar */
+}
+
+.section-head {
+    margin-bottom: 22px;
+    padding-left: 16px;
+    border-left: 5px solid var(--orange);
+}
+
+.section-head h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 3.4vw, 38px);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.section-head p {
+    margin-top: 4px;
+    font-size: 16px;
+    color: var(--muted);
+}
+
+/* ===== Food grid ===== */
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.food-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(244, 105, 5, 0.14);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .food-card,
+    .food-card:hover {
+        transition: none;
+        transform: none;
+    }
+}
+
+/* Photo area. If the image file is missing, the emoji shows instead. */
+.food-media {
+    position: relative;
+    flex: 1 0 190px;
+    min-height: 190px;
+    background: var(--tint);
+}
+
+.food-media::before {
+    content: var(--emoji);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+}
+
+.food-photo {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.food-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 20px 20px;
+}
+
+.food-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 6px;
+}
+
+.food-body p {
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--muted);
+    margin-bottom: 16px;
+}
+
+.food-foot {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--orange-deep);
+}
+
+.add-btn {
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    background: var(--orange-deep);
+    border: none;
+    border-radius: 999px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.add-btn:hover {
+    background: var(--orange-dark);
+}
+
+.tag {
+    align-self: flex-start;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--orange-dark);
+    background: var(--tint);
+    border-radius: 999px;
+    padding: 4px 12px;
+    margin-bottom: 10px;
+}
+
+/* ===== Featured card: first item in each category, spans two columns ===== */
+.food-card.is-featured {
+    grid-column: span 2;
+    flex-direction: row;
+}
+
+.is-featured .food-media {
+    flex: 0 0 50%;
+    min-height: 260px;
+}
+
+.is-featured .food-body {
+    flex: 1;
+    justify-content: center;
+    padding: 28px;
+}
+
+.is-featured .food-body h3 {
+    font-size: 30px;
+}
+
+.is-featured .food-body p {
+    font-size: 16px;
+}
+
+/* ===== Tablet: 2 columns ===== */
+@media (max-width: 900px) {
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== Mobile: 1 column ===== */
+@media (max-width: 600px) {
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .food-card.is-featured {
+        grid-column: span 1;
+        flex-direction: column;
+    }
+
+    .is-featured .food-media {
+        flex: 1 0 200px;
+        min-height: 200px;
+    }
+
+    .is-featured .food-body {
+        padding: 18px 20px 20px;
+    }
+
+    .is-featured .food-body h3 {
+        font-size: 24px;
+    }
+
+    .menu-hero {
+        padding: 40px 6% 36px;
+    }
+}
+
+/* ===== Footer ===== */
+.menu-footer {
+    text-align: center;
+    padding: 28px 8%;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 14px;
+}
